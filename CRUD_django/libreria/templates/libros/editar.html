@@ -6,6 +6,17 @@ Editar info de libro
 
 {% block contenido %}
 
-Formulario para editar info de libros
+<div class="card">
+    <div class="card-header">
+        Edita un Libro
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Ediatr datos del Libro</h4>
+        {% include 'libros/form.html' %}
+    </div>
+    <div class="card-footer text-muted">
+    Hecho por Jota Contreras    
+    </div>
+</div>
 
 {% endblock %}
