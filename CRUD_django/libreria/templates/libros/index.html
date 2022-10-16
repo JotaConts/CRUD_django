@@ -35,7 +35,7 @@ Lista de Libros
                         <td>{{ libro.descripcion }}</td>
                         <td>{{ libro.acciones }}</td>
                         <td>
-                            <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
+                            <a name="" id="" class="btn btn-info" href="{% url 'editar' libro.id %}" role="button">Editar</a>
                             <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' libro.id %}" role="button">Borrar</a>
                         </td>
                     </tr>
