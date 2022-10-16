@@ -6,14 +6,11 @@ Librería JC
 
 {% block contenido %}
 
-<div class="row align-items-md-stretch">
-    <div class="col-md-6">
-        <div
-            class="h-100 p-5 text-white bg-primary border rounded-3">
-            <h2>Bienvenidos a la librería JC</h2>
-            <p>Ingresar libros</p>
-            <button class="btn btn-outline-primary" type="button">Comenzar</button>
-        </div>
+<div class="p-5 bg-light">
+    <div class="container">
+        <h1 class="display-3">Bienvenidos a Librería JC</h1>
+        <p class="lead">Plataforma de ingreso de libros</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'libros' %}">Empezar</a>
     </div>
 </div>
 

@@ -11,9 +11,9 @@ Lista de Libros
         <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar nuevo libro</a>
     </div>
     <div class="card-body">
-        <h4 class="card-title">Libros</h4>
+        <h4 class="card-title">Listado de Libros</h4>
         <div class="table-responsive">
-            <table class="table table-primary">
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -25,18 +25,21 @@ Lista de Libros
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <td>1</td>
-                        <td>Django con Python</td>
-                        <td>Imajen.jpg</td>
-                        <td>Libro sobre Django framework</td>
+                    {% for libro in libros %}
+                    <tr>
+                        <td>{{ libro.id }}</td>
+                        <td>{{ libro.titulo }}</td>
+                        <td>
+                            <img src="{{ libro.imagen.url }}" height="100" />
+                        </td>
+                        <td>{{ libro.descripcion }}</td>
+                        <td>{{ libro.acciones }}</td>
                         <td>
                             <a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a>
-                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a>
+                            <a name="" id="" class="btn btn-danger" href="{% url 'eliminar' libro.id %}" role="button">Borrar</a>
                         </td>
-
-
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
